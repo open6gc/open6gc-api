@@ -16,7 +16,7 @@ Follow the instructions to start developing.
 Run the following command to clone the 'open6gc-api-specs' (defined as a submodule)
 
 ```bash
-$ git submodule update --recursive --remote
+$ git submodule init && git submodule update
 ```
 
 ### **Build** 
