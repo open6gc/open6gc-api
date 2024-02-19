@@ -1,0 +1,3 @@
+[submodule "src/main/resources/open6gc-api-specs"]
+	path = src/main/resources/open6gc-api-specs
+	url = https://github.com/open6gc/open6gc-api-specs

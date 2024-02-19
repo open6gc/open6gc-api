@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>br.ufu.facom.brasil6g</groupId>
+    <artifactId>open6gc-api</artifactId>
+    <version>0.0.1</version>
+    <name>open6gc-api</name>
+    <description>API Stubs/Models for Brasil 6G</description>
+    <packaging>jar</packaging>
+
+    <!-- Define project properties -->
+    <properties>
+        <java.version>11</java.version>
+        <openapi-generator-maven-plugin.version>7.2.0</openapi-generator-maven-plugin.version>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
+    <!-- Parent POM -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.3</version>
+        <relativePath/>
+    </parent>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.2.20</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>0.2.6</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- OpenAPI Generator Maven plugin -->
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>${openapi-generator-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>nrf-management</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29510_Nnrf_NFManagement.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nrf-discovery</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29510_Nnrf_NFDiscovery.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-analytics-info</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_AnalyticsInfo.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>amf-event-exposure</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29518_Namf_EventExposure.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
