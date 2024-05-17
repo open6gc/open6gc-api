@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.ufu.facom.brasil6g</groupId>
     <artifactId>open6gc-api</artifactId>
@@ -12,7 +12,7 @@
     <!-- Define project properties -->
     <properties>
         <java.version>11</java.version>
-        <openapi-generator-maven-plugin.version>7.2.0</openapi-generator-maven-plugin.version>
+        <openapi-generator-maven-plugin.version>7.5.0</openapi-generator-maven-plugin.version>
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
 
@@ -140,6 +140,149 @@
                                 <skipDefaultInterface>false</skipDefaultInterface>
                                 <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
                             </configOptions>
+                            <environmentVariables>
+                                <maxYamlCodePoints>99999999</maxYamlCodePoints>
+                            </environmentVariables>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-data-management</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_DataManagement.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-event-subscription</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_EventsSubscription.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-ml-model-monitor</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_MLModelMonitor.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-ml-model-provision</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_MLModelProvision.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-ml-model-training</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_MLModelTraining.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-roaming-analytics</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_RoamingAnalytics.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>nwdaf-roaming-data</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_RoamingData.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
                         </configuration>
                     </execution>
                     <execution>
@@ -169,46 +312,6 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29575_Nadrf_DataManagement.yaml</inputSpec>
-                            <generatorName>spring</generatorName>
-                            <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
-                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
-                            <generateSupportingFiles>true</generateSupportingFiles>
-                            <configOptions>
-                                <sourceFolder>src/gen/java/main</sourceFolder>
-                                <interfaceOnly>true</interfaceOnly>
-                                <skipDefaultInterface>false</skipDefaultInterface>
-                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>mfaf-3ca-data-management</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29576_Nmfaf_3caDataManagement.yaml</inputSpec>
-                            <generatorName>spring</generatorName>
-                            <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
-                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
-                            <generateSupportingFiles>true</generateSupportingFiles>
-                            <configOptions>
-                                <sourceFolder>src/gen/java/main</sourceFolder>
-                                <interfaceOnly>true</interfaceOnly>
-                                <skipDefaultInterface>false</skipDefaultInterface>
-                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>mfaf-3da-data-management</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29576_Nmfaf_3daDataManagement.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
                             <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
