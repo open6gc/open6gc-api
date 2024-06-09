@@ -35,7 +35,6 @@
             <artifactId>swagger-annotations</artifactId>
             <version>2.2.20</version>
         </dependency>
-
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -44,7 +43,6 @@
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
-            <version>2.0.1.Final</version>
         </dependency>
         <dependency>
             <groupId>org.openapitools</groupId>
@@ -91,7 +89,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29510_Nnrf_NFManagement.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nrf.management</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -111,7 +109,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29510_Nnrf_NFDiscovery.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nrf.discovery</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -131,7 +129,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_AnalyticsInfo.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.analyticsinfo</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -154,7 +152,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_DataManagement.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.datamanagement</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -174,7 +172,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_EventsSubscription.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.eventssubscription</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -194,7 +192,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_MLModelMonitor.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.mlmodelmonitor</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -214,7 +212,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_MLModelProvision.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.mlmodelprovision</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -234,7 +232,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_MLModelTraining.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.mlmodeltraining</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -254,7 +252,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_RoamingAnalytics.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.roaminganalytics</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -274,7 +272,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_RoamingData.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.roamingdata</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -294,7 +292,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29518_Namf_EventExposure.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.amf.eventexposure</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -314,7 +312,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29575_Nadrf_DataManagement.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.adrf.datamanagement</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
