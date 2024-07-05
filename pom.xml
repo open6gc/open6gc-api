@@ -121,15 +121,15 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>nwdaf-analytics-info</id>
+                        <id>amf-event-exposure</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_AnalyticsInfo.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29518_Namf_EventExposure.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.analyticsinfo</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.amf.eventexposure</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -138,9 +138,26 @@
                                 <skipDefaultInterface>false</skipDefaultInterface>
                                 <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
                             </configOptions>
-                            <environmentVariables>
-                                <maxYamlCodePoints>99999999</maxYamlCodePoints>
-                            </environmentVariables>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>adrf-data-management</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29575_Nadrf_DataManagement.yaml</inputSpec>
+                            <generatorName>spring</generatorName>
+                            <library>spring-boot</library>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.adrf.datamanagement</apiPackage>
+                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
+                            <generateSupportingFiles>true</generateSupportingFiles>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                                <interfaceOnly>true</interfaceOnly>
+                                <skipDefaultInterface>false</skipDefaultInterface>
+                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
+                            </configOptions>
                         </configuration>
                     </execution>
                     <execution>
@@ -153,26 +170,6 @@
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
                             <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.datamanagement</apiPackage>
-                            <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
-                            <generateSupportingFiles>true</generateSupportingFiles>
-                            <configOptions>
-                                <sourceFolder>src/gen/java/main</sourceFolder>
-                                <interfaceOnly>true</interfaceOnly>
-                                <skipDefaultInterface>false</skipDefaultInterface>
-                                <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
-                            </configOptions>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>nwdaf-event-subscription</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_EventsSubscription.yaml</inputSpec>
-                            <generatorName>spring</generatorName>
-                            <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.eventssubscription</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -284,15 +281,15 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>amf-event-exposure</id>
+                        <id>nwdaf-event-subscription</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29518_Namf_EventExposure.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_EventsSubscription.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.amf.eventexposure</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.eventssubscription</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -304,15 +301,15 @@
                         </configuration>
                     </execution>
                     <execution>
-                        <id>adrf-data-management</id>
+                        <id>nwdaf-analytics-info</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29575_Nadrf_DataManagement.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/src/main/resources/open6gc-api-specs/TS29520_Nnwdaf_AnalyticsInfo.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
-                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.adrf.datamanagement</apiPackage>
+                            <apiPackage>br.ufu.facom.brasil6g.open6gapi.api.nwdaf.analyticsinfo</apiPackage>
                             <modelPackage>br.ufu.facom.brasil6g.open6gapi.model</modelPackage>
                             <generateSupportingFiles>true</generateSupportingFiles>
                             <configOptions>
@@ -321,6 +318,9 @@
                                 <skipDefaultInterface>false</skipDefaultInterface>
                                 <ignoreAnyOfInEnum>true</ignoreAnyOfInEnum>
                             </configOptions>
+                            <environmentVariables>
+                                <maxYamlCodePoints>99999999</maxYamlCodePoints>
+                            </environmentVariables>
                         </configuration>
                     </execution>
                 </executions>
